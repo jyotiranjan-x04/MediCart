@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCart - Your Online Medicine Store</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body.dark-mode {
+            background: #181a1b;
+            color: #f5f5f5;
+        }
+        .navbar.dark-mode {
+            background: #222;
+            color: #f5f5f5;
+        }
+        /* Dark mode toggle slider styles */
+        .dark-mode-switch {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            user-select: none;
+        }
+        .switch-slider {
+            width: 40px;
+            height: 22px;
+            background: #ccc;
+            border-radius: 12px;
+            position: relative;
+            transition: background 0.3s;
+        }
+        .switch-slider.active {
+            background: #222;
+        }
+        .switch-knob {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 18px;
+            height: 18px;
+            background: #fff;
+            border-radius: 50%;
+            transition: left 0.3s;
+        }
+        .switch-slider.active .switch-knob {
+            left: 20px;
+            background: #ffd700;
+        }
+        .switch-label {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect x="13" y="6" width="6" height="20" fill="#fff"/>
+                        <rect x="6" y="13" width="20" height="6" fill="#fff"/>
+                    </svg>
+                    <span>MediCart</span>
+                </div>
+                <div class="dark-mode-switch" id="darkModeSwitch" title="Toggle dark mode">
+                    <span class="switch-label" id="switchLabel">Light Mode</span>
+                    <div class="switch-slider" id="switchSlider">
+                        <div class="switch-knob"></div>
+                    </div>
+                </div>
+                <div class="nav-search" id="navSearch">
+                    <input type="text" id="searchInput" placeholder="Search medicines, vitamins...">
+                    <button id="searchBtn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 12L18 18" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav-links">
+                    <button class="nav-btn" id="profileBtn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="6" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M4 18c0-3.5 2.5-6 6-6s6 2.5 6 6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span id="userNameDisplay">Login</span>
+                    </button>
+                    <button class="nav-btn cart-btn" id="cartBtn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M2 2h2l3 12h10" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="8" cy="18" r="1" fill="currentColor"/>
+                            <circle cx="16" cy="18" r="1" fill="currentColor"/>
+                            <path d="M6 4h13l-1 8H6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="nav-btn logout-btn" id="logoutBtn" style="display: none;">Logout</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="mainContent"></main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+    <script>
+        // Interactive dark mode slider logic
+        const darkModeSwitch = document.getElementById('darkModeSwitch');
+        const switchSlider = document.getElementById('switchSlider');
+        const switchLabel = document.getElementById('switchLabel');
+        const navbar = document.getElementById('navbar');
+
+        function setDarkMode(on) {
+            if (on) {
+                document.body.classList.add('dark-mode');
+                navbar.classList.add('dark-mode');
+                switchSlider.classList.add('active');
+                switchLabel.textContent = 'Dark Mode 🌙';
+                localStorage.setItem('darkMode', 'on');
+            } else {
+                document.body.classList.remove('dark-mode');
+                navbar.classList.remove('dark-mode');
+                switchSlider.classList.remove('active');
+                switchLabel.textContent = 'Light Mode ☀️';
+                localStorage.setItem('darkMode', 'off');
+            }
+        }
+
+        // Load preference
+        if (localStorage.getItem('darkMode') === 'on') {
+            setDarkMode(true);
+        } else {
+            setDarkMode(false);
+        }
+
+        darkModeSwitch.onclick = () => {
+            const isDark = document.body.classList.contains('dark-mode');
+            setDarkMode(!isDark);
+        };
+    </script>
+</body>
+</html>
