@@ -8,22 +8,22 @@ const STATE = {
 };
 
 const PRODUCTS_DATA = [
-    { id: 1, name: 'Paracetamol 500mg', category: 'medicines', price: 5.99, description: 'Pain relief and fever reducer', image: 'images/paracetamol.jpeg' },
-    { id: 2, name: 'Ibuprofen 400mg', category: 'medicines', price: 7.99, description: 'Anti-inflammatory medication', image: 'images/ibuprofen.webp' },
-    { id: 3, name: 'Amoxicillin 250mg', category: 'medicines', price: 12.99, description: 'Antibiotic for infections', image: 'images/amoxicillin.jpeg' },
-    { id: 4, name: 'Aspirin 100mg', category: 'medicines', price: 4.99, description: 'Blood thinner and pain relief', image: 'images/aspirin.png' },
-    { id: 5, name: 'Vitamin D3 1000IU', category: 'vitamins', price: 15.99, description: 'Supports bone health', image: 'images/vitamin-d3.avif' },
-    { id: 6, name: 'Vitamin C 1000mg', category: 'vitamins', price: 9.99, description: 'Immune system support', image: 'images/vitamin-c.avif' },
-    { id: 7, name: 'Multivitamin Complex', category: 'vitamins', price: 19.99, description: 'Complete daily nutrition', image: 'images/multivitamin.webp' },
-    { id: 8, name: 'Omega-3 Fish Oil', category: 'vitamins', price: 22.99, description: 'Heart and brain health', image: 'images/omega3.avif' },
-    { id: 9, name: 'Protein Powder', category: 'wellness', price: 34.99, description: 'Muscle building supplement', image: 'images/protein-powder.jpg' },
-    { id: 10, name: 'Probiotics', category: 'wellness', price: 24.99, description: 'Digestive health support', image: 'images/probiotics.webp' },
-    { id: 11, name: 'Green Tea Extract', category: 'wellness', price: 16.99, description: 'Antioxidant supplement', image: 'images/green-tea.jpg' },
-    { id: 12, name: 'Collagen Peptides', category: 'wellness', price: 29.99, description: 'Skin and joint health', image: 'images/collagen.jpg' },
-    { id: 13, name: 'Cough Syrup', category: 'medicines', price: 8.99, description: 'Relieves cough symptoms', image: 'images/cough-syrup.webp' },
-    { id: 14, name: 'Antihistamine', category: 'medicines', price: 11.99, description: 'Allergy relief medication', image: 'images/antihistamine.jpg' },
-    { id: 15, name: 'B-Complex Vitamins', category: 'vitamins', price: 13.99, description: 'Energy and metabolism', image: 'images/b-complex.avif' },
-    { id: 16, name: 'Calcium + Magnesium', category: 'vitamins', price: 17.99, description: 'Bone strength formula', image: 'images/calcium-magnesium.webp' },
+    { id: 1, name: 'Paracetamol 500mg', category: 'medicines', price: 5.99, description: 'Pain relief and fever reducer', image: 'https://assets.sayacare.in/api/images/product_image/large_image/23/74/Paracetamol-500-mg-Tablet_1.webp' },
+    { id: 2, name: 'Ibuprofen 400mg', category: 'medicines', price: 7.99, description: 'Anti-inflammatory medication', image: 'https://5.imimg.com/data5/SELLER/Default/2023/8/338103452/MQ/FF/QW/91766502/whatsapp-image-2023-08-19-at-17-09-37-500x500.jpeg' },
+    { id: 3, name: 'Amoxicillin 250mg', category: 'medicines', price: 12.99, description: 'Antibiotic for infections', image: 'https://assets.sayacare.in/api/images/product_image/large_image/44/44/Amoxicillin-250-mg-Capsule_1.webp' },
+    { id: 4, name: 'Aspirin 100mg', category: 'medicines', price: 4.99, description: 'Blood thinner and pain relief', image: 'https://5.imimg.com/data5/SELLER/PDFImage/2024/5/419969494/YB/FR/DX/11156742/aspirin-tablets-100-mg.png' },
+    { id: 5, name: 'Vitamin D3 1000IU', category: 'vitamins', price: 15.99, description: 'Supports bone health', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtz_6hKO_3tClHYYRJFjDGuX_ThZqzwsB9Zg&s' },
+    { id: 6, name: 'Vitamin C 1000mg', category: 'vitamins', price: 9.99, description: 'Immune system support', image: 'https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/e50b3e27f77f4be1a044fcf0a2ae9577.jpg' },
+    { id: 7, name: 'Multivitamin Complex', category: 'vitamins', price: 19.99, description: 'Complete daily nutrition', image:  'https://supplemart.in/cdn/shop/files/pixelcut-export-2024-10-25T173443.176.png?v=1735538403' },
+    { id: 8, name: 'Omega-3 Fish Oil', category: 'vitamins', price: 22.99, description: 'Heart and brain health', image: 'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now01650/l/38.jpg' },
+    { id: 9, name: 'Protein Powder', category: 'wellness', price: 34.99, description: 'Muscle building supplement', image: 'https://img8.hkrtcdn.com/39078/prd_3907787-MuscleBlaze-Biozyme-Performance-Whey-4.4-lb-Rich-Chocolate_o.jpg' }, 
+    { id: 10, name: 'Probiotics', category: 'wellness', price: 24.99, description: 'Digestive health support', image:  'https://mycf.in/cdn/shop/files/B07J2KN2VD.MAIN.jpg?v=1752314618' },
+    { id: 11, name: 'Green Tea Extract', category: 'wellness', price: 16.99, description: 'Antioxidant supplement', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ3OTzEeXIiKLdvnSwEvgStLMFWsrY34RVzw&s' },
+    { id: 12, name: 'Collagen Peptides', category: 'wellness', price: 29.99, description: 'Skin and joint health', image: 'https://m.media-amazon.com/images/I/513W9RzXnUL._UF1000,1000_QL80_.jpg' },
+    { id: 13, name: 'Cough Syrup', category: 'medicines', price: 8.99, description: 'Relieves cough symptoms', image:  'https://4.imimg.com/data4/TE/US/GLADMIN-3513191/qqq3-500x500.jpg' },
+    { id: 14, name: 'Antihistamine', category: 'medicines', price: 11.99, description: 'Allergy relief medication', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSprLtfr5H7Oi9gZt-uADM3YA7BkAqeGVQfUQ&s' },
+    { id: 15, name: 'B-Complex Vitamins', category: 'vitamins', price: 13.99, description: 'Energy and metabolism', image: 'https://m.media-amazon.com/images/I/71qAIjppAmL._UF1000,1000_QL80_.jpg' },
+    { id: 16, name: 'Calcium + Magnesium', category: 'vitamins', price: 17.99, description: 'Bone strength formula', image:  'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/now/now01252/y/126.jpg' },
 ];
 
 function init() {
