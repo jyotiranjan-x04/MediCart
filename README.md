@@ -37,6 +37,7 @@ JavaScript (Vanilla) → Functionality
 NPM → For package management (future improvements)
 
 ⚡ How to Run the Project
+
 Option 1: Open in Browser
 1.Clone the repo
 ```bash
